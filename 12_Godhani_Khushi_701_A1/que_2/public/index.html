@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Web Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #d0eaff, #e8d9ff); /* Light Sky to Purple */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #4a4a4a;
+        }
+
+        p {
+            color: #555;
+            margin-top: 15px;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Static Resource Server</h1>
+        <p>This page is served from the <strong>public</strong> folder. <!--using Express static middleware.--></p>
+        <img src="image.jpg" alt="Sample Image" />
+    </div>
+</body>
+</html>

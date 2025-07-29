@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello NodeJS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #d0eaff, #e8d9ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 360px;
+        }
+
+        h1 {
+            color: #4a4a4a;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: linear-gradient(to right, #6bc1ff, #b47bff); /* sky blue to soft purple */
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #5a5a5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Response of AJAX Demo</h1>
+        <button onclick="getHello()">Say Hello</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function getHello() {
+            fetch('/gethello')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('output').innerText = data;
+                })
+                .catch(err => {
+                    document.getElementById('output').innerText = "Error fetching response.";
+                    console.error(err);
+                });
+        }
+    </script>
+</body>
+</html>

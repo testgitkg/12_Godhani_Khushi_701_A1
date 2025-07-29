@@ -1,0 +1,19 @@
+{
+  "name": "que_8",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js",
+    "task1": "node custom-task1.js",
+    "task2": "node custom-task2.js",
+    "task3": "node custom-task3.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
